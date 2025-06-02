@@ -85,7 +85,9 @@ Berikut adalah penjelasan untuk setiap variabel dalam dataset yang digunakan:
 ### Exploratory Data Analysis (EDA)
 Beberapa tahapan visualisasi data dilakukan untuk memahami distribusi dan karakteristik data lebih lanjut (Notebook: Sel 20-28, merujuk pada output gambar yang telah Anda berikan sebelumnya):
 
-* **Distribusi Tipe Anime (`anime_df`):** Visualisasi menunjukkan bahwa tipe 'TV' adalah yang paling umum (lebih dari 3700 anime), diikuti oleh 'OVA' dan 'Movie'. Tipe 'Music' memiliki jumlah paling sedikit. (Merujuk pada output Sel 21 notebook Anda) ![Distribusi tipe anime](Screenshot 2025-06-01 113502.png)
+* **Distribusi Tipe Anime (`anime_df`):** Visualisasi menunjukkan bahwa tipe 'TV' adalah yang paling umum (lebih dari 3700 anime), diikuti oleh 'OVA' dan 'Movie'. Tipe 'Music' memiliki jumlah paling sedikit. (Merujuk pada output Sel 21 notebook Anda)
+  (./![image](https://github.com/user-attachments/assets/1cd47ada-d1e6-4d26-af0e-f807ba5962e5)
+.png)
 * **Distribusi Jumlah Episode (`anime_df`):** Sebagian besar anime memiliki jumlah episode yang relatif pendek (median 2 episode, 75% di bawah 12 episode). Terdapat 340 anime dengan jumlah episode 'Unknown'. (Merujuk pada output Sel 22 notebook Anda / `Screenshot 2025-06-01 113521.png`)
 * **Distribusi Rating Rata-rata Anime (`anime_df`):** Rating rata-rata anime terdistribusi mendekati normal dengan puncak di sekitar 6.57 (median). (Merujuk pada output Sel 23 notebook Anda / `Screenshot 2025-06-01 113537.png`)
 * **Distribusi Jumlah Anggota Komunitas (`anime_df`):** Distribusi jumlah anggota sangat condong ke kanan (*right-skewed*), mengindikasikan bahwa sebagian kecil anime sangat populer, sementara mayoritas memiliki jumlah anggota yang lebih sedikit. (Merujuk pada output Sel 24 notebook Anda / `Screenshot 2025-06-01 113550.png`)
