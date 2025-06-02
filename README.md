@@ -169,7 +169,34 @@ Output dari sel 18 (notebook) menunjukkan kolom `episodes` kini bertipe `float64
 * **Proses:** Pengecekan duplikasi `anime_id` pada `anime_prep_df` (ditemukan 0 duplikasi).
 * **Alasan:** Memastikan integritas data anime.
 
-Ringkasan akhir dari Data Preparation (Notebook: Sel 44) mengkonfirmasi bahwa `anime_prep_df` dan `explicit_rating_df` telah siap untuk tahap pemodelan.
+### **Ringkasan Tahap Data Preparation:**
+
+Pada tahap Data Preparation, beberapa langkah kunci telah dilakukan untuk membersihkan dan mentransformasi dataset `anime.csv` dan `rating.csv` agar siap untuk pemodelan:
+
+* **Penanganan Missing Values pada `anime_prep_df`:**
+    * Missing values pada kolom `genre` berhasil diisi dengan placeholder 'Unknown'.
+    * Kolom `type` yang memiliki missing values diisi menggunakan modus ('TV').
+    * Kolom `rating` (rata-rata rating anime) yang hilang diimputasi dengan nilai median (6.57).
+    * Hasilnya, `anime_prep_df` kini tidak memiliki missing values pada kolom-kolom krusial tersebut.
+
+* **Pemrosesan Kolom `episodes` pada `anime_prep_df`:**
+    * Nilai 'Unknown' (sebanyak 340 entri) pada kolom `episodes` berhasil diidentifikasi dan kemudian diimputasi dengan nilai median (2.0 episode).
+    * Kolom `episodes` telah dikonversi menjadi tipe data numerik (`float64`) dan bebas dari missing values.
+
+* **Penanganan Rating `-1` pada `rating_prep_df`:**
+    * Entri rating dengan nilai -1 (menandakan anime ditonton tanpa skor, sebanyak ~1,47 juta entri) telah difilter dari `rating_prep_df`.
+    * DataFrame baru, `explicit_rating_df`, dibuat dan kini berisi ~6,3 juta entri rating yang hanya mencakup skor eksplisit (1-10), siap untuk model Collaborative Filtering.
+
+* **Feature Engineering untuk Content-Based pada `anime_prep_df`:**
+    * Kolom `genre` telah diproses menggunakan TF-IDF, menghasilkan matriks fitur dengan dimensi (12294 anime, 48 fitur genre).
+    * Kolom `type` telah diubah menggunakan One-Hot Encoding, menghasilkan 6 kolom fitur biner baru.
+
+* **Finalisasi dan Verifikasi:**
+    * Tidak ditemukan adanya duplikasi `anime_id` pada `anime_prep_df`.
+    * `anime_prep_df` kini lebih bersih, dengan tipe data yang sesuai dan fitur-fitur baru hasil engineering (`genre_processed` untuk TF-IDF dan kolom-kolom `type_` dari OHE) yang siap mendukung pemodelan Content-Based.
+    * `explicit_rating_df` telah disiapkan khusus untuk pemodelan Collaborative Filtering berbasis rating eksplisit.
+
+Secara keseluruhan, data telah melalui pembersihan dan transformasi penting, menjadikannya lebih robust dan sesuai untuk tahap pengembangan model rekomendasi selanjutnya.
 
 ---
 
