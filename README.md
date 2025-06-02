@@ -94,7 +94,30 @@ Beberapa tahapan visualisasi data dilakukan untuk memahami distribusi dan karakt
 * **Jumlah Rating per Pengguna (`rating_df`):** Distribusinya juga condong ke kanan. Banyak pengguna memberikan relatif sedikit rating (median 57 rating), sementara beberapa pengguna sangat aktif. (Merujuk pada output Sel 27 notebook) ![image](https://github.com/Fadelhamkaa/Recomendation-System-Anime-Dataset/blob/main/Screenshot%202025-06-03%20004824.png)
 * **Jumlah Rating per Anime (`rating_df`):** Distribusinya juga sangat condong ke kanan (*long-tail*). Sebagian kecil anime menerima sangat banyak rating, sementara mayoritas hanya menerima sedikit rating (median sekitar 51 rating). (Merujuk pada output Sel 28 notebook) ![image](https://github.com/Fadelhamkaa/Recomendation-System-Anime-Dataset/blob/main/Screenshot%202025-06-03%20004830.png)
 
-Ringkasan temuan dari Data Understanding ini (Notebook: Sel 29) telah digunakan untuk memandu tahap Data Preparation.
+### **Ringkasan Temuan Data Understanding:**
+
+* **Dataset Anime (`anime.csv`):**
+    * Memiliki **12.294 entri anime unik**.
+    * Informasi detail tentang atribut anime mencakup `genre`, `type`, `episodes`, `rating` (rata-rata anime), dan `members`.
+    * Terdapat nilai yang hilang (missing values) pada kolom `genre`, `type`, dan `rating` (rata-rata anime).
+    * Kolom `episodes` bertipe *object* karena adanya **340 entri bernilai 'Unknown'** yang perlu ditangani jika fitur ini akan digunakan secara numerik. Sebagian besar anime memiliki jumlah episode sedikit (median 2, 75% di bawah 12 episode).
+    * Distribusi jumlah `members` sangat condong ke kanan (right-skewed), mengindikasikan bahwa hanya sebagian kecil anime yang sangat populer.
+    * Rating rata-rata anime terdistribusi mendekati normal dengan **median sekitar 6.57**.
+    * Tipe anime yang paling dominan adalah **'TV'**.
+
+* **Dataset Rating (`rating.csv`):**
+    * Berisi lebih dari **7,8 juta entri rating** dari **73.515 pengguna unik** untuk **11.200 anime unik**.
+    * Tidak ditemukan missing values pada kolom-kolomnya.
+    * Menyimpan interaksi pengguna dengan anime, termasuk rating eksplisit (skala 1-10) dan indikasi telah ditonton tanpa rating (nilai **-1**, yang jumlahnya signifikan, sekitar **1,47 juta entri**).
+
+* **Pola Umum pada Data:**
+    * Distribusi data untuk jumlah `members` (anime), jumlah rating per pengguna (median 57 rating/pengguna), dan jumlah rating per anime (median sekitar 51 rating/anime) cenderung **sangat condong ke kanan (right-skewed atau long-tail)**. Ini menunjukkan adanya item/pengguna yang sangat populer/aktif sementara mayoritas lainnya kurang, yang mengarah pada potensi masalah *sparsity*.
+    * Genre paling populer antara lain **Comedy (sekitar 4600+ anime), Action (2800+), Adventure (2300+), Fantasy (2300+), dan Sci-Fi (2000+)**.
+    * Data rating pengguna menunjukkan preferensi yang kuat pada **skor tinggi (paling banyak rating 7, 8, dan 9)**.
+
+* **Implikasi untuk Tahap Selanjutnya:**
+    * Temuan ini akan menjadi dasar krusial untuk tahap **Data Preparation**. Langkah-langkah seperti penanganan missing values, konversi tipe data (misalnya, `episodes`), dan transformasi fitur (misalnya, untuk `genre`) akan diperlukan.
+    * Sifat data yang *sparse* dan *skewed* juga perlu dipertimbangkan saat memilih dan mengimplementasikan algoritma model rekomendasi.
 
 ---
 
