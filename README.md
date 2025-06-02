@@ -226,8 +226,11 @@ Pendekatan ini menggunakan algoritma Singular Value Decomposition (SVD) dari lib
     4.  Sebuah fungsi `get_anime_recommendations_collaborative_svd` dibuat untuk mengambil `user_id` sebagai input, memprediksi rating untuk anime yang belum ditonton pengguna, dan mengembalikan top-N anime dengan prediksi rating tertinggi.
 
 * **Hasil Rekomendasi (Top-N) (Notebook: Sel 55):**
-    * **Untuk User ID 50682 (contoh output Anda):** Top-5 rekomendasi ("Mahou Shoujo Madoka★Magica Movie 3", "Kimi no Na wa.", "Cowboy Bebop", dll.) memiliki prediksi rating SVD yang sangat tinggi (8.997 - 9.265) dan berasal dari genre yang beragam.
-    * **Untuk User ID 65242 (contoh output Anda):** Top-5 rekomendasi ("Prince of Tennis", "Gakuen Alice", "Mobile Suit Gundam Wing", dll.) semuanya mendapatkan prediksi rating SVD sempurna yaitu 10.0, juga dari genre yang beragam.
+    * **Untuk User ID 57243 (berdasarkan output notebook):** Top-5 rekomendasi dari model SVD adalah "Gintama", "Gintama&#039;", "Gintama°", "Ginga Eiyuu Densetsu", dan "Clannad: After Story". Anime-anime ini mendapatkan prediksi rating SVD yang sangat tinggi, yaitu 10.000 untuk ketiga seri "Gintama", 9.946 untuk "Ginga Eiyuu Densetsu", dan 9.925 untuk "Clannad: After Story". Rekomendasi ini mencakup anime dari genre Action, Comedy, Historical, Parody, Samurai, Sci-Fi, Shounen (untuk Gintama), Drama, Military, Sci-Fi, Space (untuk Ginga Eiyuu Densetsu), serta Drama, Fantasy, Romance, Slice of Life, Supernatural (untuk Clannad).
+
+    
+
+    * **Untuk User ID 27805 (berdasarkan output notebook):** Top-5 rekomendasi dari model SVD adalah "Kimi no Na wa.", "Ginga Eiyuu Densetsu", "Code Geass: Hangyaku no Lelouch R2", "Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuiokuhen", dan "Fullmetal Alchemist: Brotherhood". Prediksi rating SVD untuk anime-anime ini juga sangat tinggi, berkisar antara 9.265 hingga 9.484. Rekomendasi ini menampilkan keberagaman genre, termasuk Drama, Romance, School, Supernatural; Drama, Military, Sci-Fi, Space; Action, Drama, Mecha; Action, Drama, Historical, Martial Arts; dan Action, Adventure, Fantasy.
 
 ### 5.3. Kelebihan dan Kekurangan Pendekatan yang Dipilih (Notebook: Sel 56)
 * **Content-Based Filtering:**
