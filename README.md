@@ -21,7 +21,7 @@ Pengembangan sistem rekomendasi didasarkan pada penelitian dan praktik yang suda
 [1] C. A. Gomez-Uribe and N. Hunt, "The Netflix Recommender System: Algorithms, Business Value, and Innovation," *ACM Transactions on Management Information Systems (TMIS)*, vol. 6, no. 4, pp. 1-19, Jan. 2016.
 [2] M. D. Ekstrand, J. T. Riedl, and J. A. Konstan, "Collaborative filtering recommender systems," *Foundations and Trends® in Human–Computer Interaction*, vol. 4, no. 2, pp. 81-173, 2011.
 [3] F. Ricci, L. Rokach, and B. Shapira, *Recommender Systems Handbook*. Springer, 2011.
-*(Catatan: Anda dapat menyesuaikan format sitasi dan menambahkan referensi lain yang lebih spesifik jika diperlukan, misalnya dari Google Scholar).*
+
 
 ---
 
@@ -83,7 +83,7 @@ Berikut adalah penjelasan untuk setiap variabel dalam dataset yang digunakan:
 * `rating`: Rating yang diberikan pengguna untuk anime tersebut (skala 1-10). Nilai `-1` berarti pengguna telah menonton anime tersebut tetapi tidak memberikan rating.
 
 ### Exploratory Data Analysis (EDA)
-Beberapa tahapan visualisasi data dilakukan untuk memahami distribusi dan karakteristik data lebih lanjut (Notebook: Sel 20-28, merujuk pada output gambar yang telah Anda berikan sebelumnya):
+Beberapa tahapan visualisasi data dilakukan untuk memahami distribusi dan karakteristik data lebih lanjut:
 
 * **Distribusi Tipe Anime (`anime_df`):** Visualisasi menunjukkan bahwa tipe 'TV' adalah yang paling umum (lebih dari 3700 anime), diikuti oleh 'OVA' dan 'Movie'. Tipe 'Music' memiliki jumlah paling sedikit. (Merujuk pada output Sel 21 notebook) ![image](https://github.com/Fadelhamkaa/Recomendation-System-Anime-Dataset/blob/main/Screenshot%202025-06-01%20113502.png)
 * **Distribusi Jumlah Episode (`anime_df`):** Sebagian besar anime memiliki jumlah episode yang relatif pendek (median 2 episode, 75% di bawah 12 episode). Terdapat 340 anime dengan jumlah episode 'Unknown'. (Merujuk pada output Sel 22 notebook) ![image](https://github.com/Fadelhamkaa/Recomendation-System-Anime-Dataset/blob/main/Screenshot%202025-06-01%20113521.png)
