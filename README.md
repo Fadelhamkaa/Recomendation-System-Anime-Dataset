@@ -228,9 +228,11 @@ Pendekatan ini menggunakan algoritma Singular Value Decomposition (SVD) dari lib
 * **Hasil Rekomendasi (Top-N) (Notebook: Sel 55):**
     * **Untuk User ID 57243 (berdasarkan output notebook):** Top-5 rekomendasi dari model SVD adalah "Gintama", "Gintama&#039;", "Gintama°", "Ginga Eiyuu Densetsu", dan "Clannad: After Story". Anime-anime ini mendapatkan prediksi rating SVD yang sangat tinggi, yaitu 10.000 untuk ketiga seri "Gintama", 9.946 untuk "Ginga Eiyuu Densetsu", dan 9.925 untuk "Clannad: After Story". Rekomendasi ini mencakup anime dari genre Action, Comedy, Historical, Parody, Samurai, Sci-Fi, Shounen (untuk Gintama), Drama, Military, Sci-Fi, Space (untuk Ginga Eiyuu Densetsu), serta Drama, Fantasy, Romance, Slice of Life, Supernatural (untuk Clannad).
 
-    
+    ![Hasil Rekomendasi (Top-N) untuk User ID 57243](https://github.com/Fadelhamkaa/Recomendation-System-Anime-Dataset/blob/main/Screenshot%202025-06-03%20013134.png)
 
     * **Untuk User ID 27805 (berdasarkan output notebook):** Top-5 rekomendasi dari model SVD adalah "Kimi no Na wa.", "Ginga Eiyuu Densetsu", "Code Geass: Hangyaku no Lelouch R2", "Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuiokuhen", dan "Fullmetal Alchemist: Brotherhood". Prediksi rating SVD untuk anime-anime ini juga sangat tinggi, berkisar antara 9.265 hingga 9.484. Rekomendasi ini menampilkan keberagaman genre, termasuk Drama, Romance, School, Supernatural; Drama, Military, Sci-Fi, Space; Action, Drama, Mecha; Action, Drama, Historical, Martial Arts; dan Action, Adventure, Fantasy.
+
+    ![Hasil Rekomendasi (Top-N) untuk User ID 27805](https://github.com/Fadelhamkaa/Recomendation-System-Anime-Dataset/blob/main/Screenshot%202025-06-03%20013142.png)
 
 ### 5.3. Kelebihan dan Kekurangan Pendekatan yang Dipilih (Notebook: Sel 56)
 * **Content-Based Filtering:**
