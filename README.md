@@ -286,7 +286,3 @@ Pada tahap evaluasi (Notebook: Sel 57-63), kinerja kedua model sistem rekomendas
 
 ---
 **---Ini adalah bagian akhir laporan---**
-
-_Catatan:_
-- _Gambar, tabel, dan code snippet dari notebook dapat disisipkan di sini sesuai kebutuhan untuk memperjelas penjelasan._
-- _Pastikan semua sumber dan kutipan telah sesuai dengan panduan yang diberikan._
